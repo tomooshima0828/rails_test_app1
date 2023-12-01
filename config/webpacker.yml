@@ -1,0 +1,20 @@
+# config/webpacker.yml
+default: &default
+  source_path: app/javascript
+  source_entry_path: packs
+  public_output_path: packs
+  cache_path: tmp/cache/webpacker
+  # Additional paths webpack should lookup modules
+  # ['app/assets', 'engine/foo/app/assets']
+  resolved_paths: []
+  # Reload manifest.json on all requests so we can debug using the dev server
+  cache_manifest: false
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
